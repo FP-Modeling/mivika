@@ -17,6 +17,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Update packages
+        run: sudo apt-get update
         
       - name: Install pdflatex
         run: sudo apt-get install texlive-latex-base
